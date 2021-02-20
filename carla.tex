@@ -1,0 +1,222 @@
+% This LaTeX was auto-generated from MATLAB code.
+% To make changes, update the MATLAB code and export to LaTeX again.
+
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{epstopdf}
+\usepackage[table]{xcolor}
+\usepackage{matlab}
+
+\sloppy
+\epstopdfsetup{outdir=./}
+\graphicspath{ {./carla_images/} }
+
+\matlabhastoc
+
+\begin{document}
+
+\label{T_7D91569C}
+\matlabtitle{Carla Autonomous Driving}
+
+\matlabtableofcontents{Table of Contents}
+
+\vspace{1em}
+
+\label{H_57255A8D}
+\matlabheading{Image folder}
+
+\begin{matlabcode}
+imgs = dir("_out\*.png")
+\end{matlabcode}
+\begin{matlabtableoutput}
+{
+\begin{tabular} {|c|c|c|c|c|c|c|}\hline
+\mlcell{Fields} & \mlcell{name} & \mlcell{folder} & \mlcell{date} & \mlcell{bytes} & \mlcell{isdir} & \mlcell{datenum} \\ \hline
+\mlcell{1} & \mlcell{'00001229.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:03'} & \mlcell{1575535} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{2} & \mlcell{'00001230.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:03'} & \mlcell{1575036} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{3} & \mlcell{'00001231.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:03'} & \mlcell{1574704} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{4} & \mlcell{'00001232.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:03'} & \mlcell{1574134} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{5} & \mlcell{'00001233.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:04'} & \mlcell{1573079} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{6} & \mlcell{'00001234.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:04'} & \mlcell{1571314} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{7} & \mlcell{'00001235.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:04'} & \mlcell{1574142} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{8} & \mlcell{'00001236.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:04'} & \mlcell{1575037} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{9} & \mlcell{'00001239.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:05'} & \mlcell{1574708} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{10} & \mlcell{'00001240.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:05'} & \mlcell{1574127} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{11} & \mlcell{'00001241.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:05'} & \mlcell{1573074} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{12} & \mlcell{'00001242.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:05'} & \mlcell{1571321} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{13} & \mlcell{'00001243.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:05'} & \mlcell{1574141} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{14} & \mlcell{'00001245.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:06'} & \mlcell{1575455} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{15} & \mlcell{'00001246.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:06'} & \mlcell{1575031} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{16} & \mlcell{'00001249.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:06'} & \mlcell{1572554} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{17} & \mlcell{'00001250.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:07'} & \mlcell{1572860} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{18} & \mlcell{'00001252.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:07'} & \mlcell{1565841} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{19} & \mlcell{'00001253.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:07'} & \mlcell{1565088} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{20} & \mlcell{'00001254.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:07'} & \mlcell{1554655} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{21} & \mlcell{'00001256.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:07'} & \mlcell{1550015} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{22} & \mlcell{'00001257.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:07'} & \mlcell{1540072} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{23} & \mlcell{'00001258.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:08'} & \mlcell{1537115} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{24} & \mlcell{'00001260.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:08'} & \mlcell{1549624} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{25} & \mlcell{'00001262.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:08'} & \mlcell{1566989} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{26} & \mlcell{'00001263.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:09'} & \mlcell{1577270} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{27} & \mlcell{'00001265.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:09'} & \mlcell{1589757} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{28} & \mlcell{'00001266.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:09'} & \mlcell{1603230} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{29} & \mlcell{'00001267.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:09'} & \mlcell{1606231} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{30} & \mlcell{'00001268.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:09'} & \mlcell{1614552} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{31} & \mlcell{'00001269.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:10'} & \mlcell{1612546} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{32} & \mlcell{'00001271.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:10'} & \mlcell{1604661} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{33} & \mlcell{'00001272.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:10'} & \mlcell{1597895} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{34} & \mlcell{'00001273.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:10'} & \mlcell{1597970} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{35} & \mlcell{'00001274.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:10'} & \mlcell{1599253} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{36} & \mlcell{'00001275.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:11'} & \mlcell{1598999} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{37} & \mlcell{'00001276.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:11'} & \mlcell{1599410} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{38} & \mlcell{'00001277.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:11'} & \mlcell{1602703} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{39} & \mlcell{'00001279.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:11'} & \mlcell{1607069} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{40} & \mlcell{'00001281.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:12'} & \mlcell{1607886} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{41} & \mlcell{'00001282.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:12'} & \mlcell{1608027} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{42} & \mlcell{'00001283.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:12'} & \mlcell{1611067} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{43} & \mlcell{'00001284.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:12'} & \mlcell{1617729} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{44} & \mlcell{'00001286.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:12'} & \mlcell{1625132} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{45} & \mlcell{'00001287.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:12'} & \mlcell{1629869} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{46} & \mlcell{'00001288.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:13'} & \mlcell{1630716} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{47} & \mlcell{'00001291.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:13'} & \mlcell{1641361} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{48} & \mlcell{'00001292.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:13'} & \mlcell{1643751} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{49} & \mlcell{'00001293.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:13'} & \mlcell{1647788} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{50} & \mlcell{'00001294.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:14'} & \mlcell{1650318} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{51} & \mlcell{'00001295.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:14'} & \mlcell{1666867} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{52} & \mlcell{'00001296.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:14'} & \mlcell{1661412} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{53} & \mlcell{'00001297.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:14'} & \mlcell{1656858} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{54} & \mlcell{'00001299.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:15'} & \mlcell{1655143} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{55} & \mlcell{'00001300.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:15'} & \mlcell{1647845} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{56} & \mlcell{'00001301.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:15'} & \mlcell{1650641} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{57} & \mlcell{'00001302.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:15'} & \mlcell{1647310} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{58} & \mlcell{'00001303.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:15'} & \mlcell{1634651} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{59} & \mlcell{'00001304.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:16'} & \mlcell{1633268} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{60} & \mlcell{'00001305.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:16'} & \mlcell{1647907} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{61} & \mlcell{'00001306.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:16'} & \mlcell{1646899} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{62} & \mlcell{'00001307.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:16'} & \mlcell{1650657} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{63} & \mlcell{'00001310.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:17'} & \mlcell{1669631} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{64} & \mlcell{'00001312.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:17'} & \mlcell{1683514} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{65} & \mlcell{'00001314.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:17'} & \mlcell{1674931} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{66} & \mlcell{'00001315.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:18'} & \mlcell{1667763} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{67} & \mlcell{'00001316.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:18'} & \mlcell{1670042} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{68} & \mlcell{'00001317.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:18'} & \mlcell{1682551} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{69} & \mlcell{'00001318.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:18'} & \mlcell{1674678} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{70} & \mlcell{'00001319.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:19'} & \mlcell{1675198} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{71} & \mlcell{'00001322.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:19'} & \mlcell{1615726} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{72} & \mlcell{'00001323.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:19'} & \mlcell{1620234} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{73} & \mlcell{'00001324.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:19'} & \mlcell{1620211} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{74} & \mlcell{'00001325.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:19'} & \mlcell{1628520} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{75} & \mlcell{'00001326.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:19'} & \mlcell{1627944} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{76} & \mlcell{'00001327.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:20'} & \mlcell{1624614} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{77} & \mlcell{'00001328.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:20'} & \mlcell{1623790} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{78} & \mlcell{'00001329.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:20'} & \mlcell{1617550} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{79} & \mlcell{'00001331.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:20'} & \mlcell{1610145} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{80} & \mlcell{'00001332.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:21'} & \mlcell{1610522} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{81} & \mlcell{'00001333.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:21'} & \mlcell{1615014} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{82} & \mlcell{'00001334.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:21'} & \mlcell{1609899} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{83} & \mlcell{'00001335.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:21'} & \mlcell{1597172} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{84} & \mlcell{'00001336.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:21'} & \mlcell{1585370} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{85} & \mlcell{'00001337.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:22'} & \mlcell{1598689} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{86} & \mlcell{'00001338.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:22'} & \mlcell{1599671} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{87} & \mlcell{'00001339.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:22'} & \mlcell{1599763} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{88} & \mlcell{'00001340.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:22'} & \mlcell{1606362} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{89} & \mlcell{'00001341.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:22'} & \mlcell{1604128} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{90} & \mlcell{'00001342.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:23'} & \mlcell{1602594} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{91} & \mlcell{'00001343.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:23'} & \mlcell{1601338} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{92} & \mlcell{'00001344.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:23'} & \mlcell{1601019} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{93} & \mlcell{'00001345.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:23'} & \mlcell{1607239} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{94} & \mlcell{'00001346.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:23'} & \mlcell{1602116} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{95} & \mlcell{'00001347.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:24'} & \mlcell{1599789} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{96} & \mlcell{'00001349.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:24'} & \mlcell{1598147} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{97} & \mlcell{'00001350.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:24'} & \mlcell{1591964} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{98} & \mlcell{'00001351.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:24'} & \mlcell{1607251} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{99} & \mlcell{'00001352.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:25'} & \mlcell{1608539} & \mlcell{0} & \mlcell{7.3821e+05} \\ \hline
+\mlcell{100} & \mlcell{'00001354.png'} & \mlcell{'C:\\Users\\ydebray\\Downloads\\carla\\\_out'} & \mlcell{'20-févr.-2021 12:48:25'} & \mlcell{1609671} & \mlcell{0} & \mlcell{7.3821e+05} \\ 
+\hline
+\end{tabular}
+}
+\end{matlabtableoutput}
+
+
+\begin{matlabcode}
+imgFolder = "_out";
+imds = imageDatastore(imgFolder);
+
+videoPlayer = vision.VideoPlayer;
+
+reset(imds);
+reset(videoPlayer)
+
+while hasdata( imds )   
+   I = read( imds );
+   step(videoPlayer,I);
+end
+\end{matlabcode}
+\begin{center}
+\includegraphics[width=\maxwidth{41.14400401404917em}]{figure_0.png}
+\end{center}
+
+
+\begin{matlabcode}
+% Show recorded images 
+i = 48;
+img = imread(string(imds.Files(i)));
+imshow(img)
+\end{matlabcode}
+\begin{center}
+\includegraphics[width=\maxwidth{80.28098344204717em}]{figure_1.png}
+\end{center}
+
+
+\label{H_F9A06A40}
+\matlabheading{Pre-trained vehicle detector}
+
+\begin{matlabcode}
+i = 48;
+detector = vehicleDetectorACF('front-rear-view');
+img = imread(string(imds.Files(i)));
+[bboxes,scores] = detect(detector,img);
+if ~isempty( bboxes )
+    img = insertObjectAnnotation(img,'rectangle',bboxes,scores);
+end
+imshow(img)
+\end{matlabcode}
+\begin{center}
+\includegraphics[width=\maxwidth{80.28098344204717em}]{figure_2.png}
+\end{center}
+
+
+\label{H_14F7BB83}
+\matlabheading{Sensor}
+
+
+\vspace{1em}
+\begin{par}
+\begin{flushleft}
+\includegraphics[width=\maxwidth{50.17561465127948em}]{image_0}
+\end{flushleft}
+\end{par}
+
+
+\vspace{1em}
+
+\label{H_40E19370}
+\matlabheading{Map}
+
+
+\vspace{1em}
+\begin{par}
+\begin{flushleft}
+\includegraphics[width=\maxwidth{50.17561465127948em}]{image_1}
+\end{flushleft}
+\end{par}
+
+\end{document}
