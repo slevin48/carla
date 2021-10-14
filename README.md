@@ -29,7 +29,8 @@ pip install matplotlib==2.2.2
 
 Read [Programming Assignment](coursera/README.md)
 
-![carla-track](img/carla-track.avi)
+
+![carla-track](img/carla-track.mp4)
 
 
 
