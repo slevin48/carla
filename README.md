@@ -2,7 +2,7 @@
 
 Autonomous Driving Simulator 🚗
 
-[![CARLA Video](img/video_thumbnail_0910.jpg)](https://www.youtube.com/watch?v=7jej46ALVRE)
+![carla](https://deepanshut041.github.io/self-driving-car-specialization/01_introduction_to_self_driving_cars/media/cover.gif)
 
 
 ## Setup Carla
@@ -52,7 +52,7 @@ Move the Course1FinalProject inside of CarlaSimulator/PythonClient
 ```
 python module_7.py
 ```
-![carla-track](https://deepanshut041.github.io/self-driving-car-specialization/01_introduction_to_self_driving_cars/media/cover.gif)
+![carla-track](img/carla-track.mp4)
 
 Completing the track produces the folder controller_ouput
 
@@ -124,3 +124,6 @@ python module_7.py --images-to-disk
 * https://deepanshut041.github.io/self-driving-car-specialization/01_introduction_to_self_driving_cars/
 * https://github.com/paulyehtw/Lane-Keeping-Assist-on-CARLA
 * https://github.com/Mostafa-wael/Self-Driving-Vehicle-Control-on-CARLA
+
+
+[![CARLA Video](img/video_thumbnail_0910.jpg)](https://www.youtube.com/watch?v=7jej46ALVRE)
