@@ -91,6 +91,10 @@ and remove *episode_{:0>4d}* from the *out_filename_format*:
 args.out_filename_format = '_out/frame_{:s}/{:0>6d}'
 ```
 
+Run Python client with the `--images-to-disk` argument:
+```
+python module_7.py --images-to-disk
+```
 ## Features to add
 
 ### Sensor
