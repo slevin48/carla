@@ -47,10 +47,49 @@ python manual_control.py
 
 Read [Programming Assignment](coursera/README.md)
 
+Move the Course1FinalProject inside of CarlaSimulator/PythonClient
+(to access `live_plotter.py`)
+```
+python module_7.py
+```
+![carla-track](https://deepanshut041.github.io/self-driving-car-specialization/01_introduction_to_self_driving_cars/media/cover.gif)
 
-![carla-track](img/carla-track.mp4)
+## Add Camera
 
+Add [Camera sensor](https://carla.readthedocs.io/en/stable/cameras_and_sensors/) in the function `make_carla_settings`:
 
+```python
+        
+    WINDOW_WIDTH = 800
+    WINDOW_HEIGHT = 600
+
+    camera0 = sensor.Camera('CameraRGB')
+    camera0.set_image_size(WINDOW_WIDTH, WINDOW_HEIGHT)
+    camera0.set_position(2.0, 0.0, 1.4)
+    camera0.set_rotation(0.0, 0.0, 0.0)
+    settings.add_sensor(camera0)
+```
+Save images to disk in the function `exec_waypoint_nav_demo`:
+
+```python
+            # Save the images to disk if requested.
+            if args.save_images_to_disk:
+                for name, measurement in sensor_data.items():
+                    filename = args.out_filename_format.format(name, frame)
+                    measurement.save_to_disk(filename)
+```
+Add argument to the function `main`:
+```python
+    argparser.add_argument(
+        '-i', '--images-to-disk',
+        action='store_true',
+        dest='save_images_to_disk',
+        help='save images (and Lidar data if active) to disk')
+```
+and remove *episode_{:0>4d}* from the *out_filename_format*:
+```
+args.out_filename_format = '_out/frame_{:s}/{:0>6d}'
+```
 
 ## Features to add
 

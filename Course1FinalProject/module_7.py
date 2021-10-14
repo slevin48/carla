@@ -110,6 +110,17 @@ def make_carla_settings(args):
         SeedPedestrians=SEED_PEDESTRIANS,
         WeatherId=SIMWEATHER,
         QualityLevel=args.quality_level)
+
+        
+    WINDOW_WIDTH = 800
+    WINDOW_HEIGHT = 600
+
+    camera0 = sensor.Camera('CameraRGB')
+    camera0.set_image_size(WINDOW_WIDTH, WINDOW_HEIGHT)
+    camera0.set_position(2.0, 0.0, 1.4)
+    camera0.set_rotation(0.0, 0.0, 0.0)
+    settings.add_sensor(camera0)
+
     return settings
 
 class Timer(object):
@@ -524,6 +535,12 @@ def exec_waypoint_nav_demo(args):
             speed_history.append(current_speed)
             time_history.append(current_timestamp) 
 
+            # Save the images to disk if requested.
+            if args.save_images_to_disk:
+                for name, measurement in sensor_data.items():
+                    filename = args.out_filename_format.format(name, frame)
+                    measurement.save_to_disk(filename)
+
             ###
             # Controller update (this uses the controller2d.py implementation)
             ###
@@ -714,6 +731,11 @@ def main():
         dest='settings_filepath',
         default=None,
         help='Path to a "CarlaSettings.ini" file')
+    argparser.add_argument(
+        '-i', '--images-to-disk',
+        action='store_true',
+        dest='save_images_to_disk',
+        help='save images (and Lidar data if active) to disk')
     args = argparser.parse_args()
 
     # Logging startup info
@@ -721,7 +743,7 @@ def main():
     logging.basicConfig(format='%(levelname)s: %(message)s', level=log_level)
     logging.info('listening to server %s:%s', args.host, args.port)
 
-    args.out_filename_format = '_out/episode_{:0>4d}/{:s}/{:0>6d}'
+    args.out_filename_format = '_out/frame_{:s}/{:0>6d}'
 
     # Execute when server connection is established
     while True:
