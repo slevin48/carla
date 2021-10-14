@@ -24,6 +24,24 @@ pip install -r requirements.txt
 pip install matplotlib==2.2.2
 ```
 
+- Test that Carla is working
+
+
+Run Carla in server mode:
+```
+cd CarlaSimulator
+CarlaUE4.exe /Game/Maps/RaceTrack -windowed -carla-server
+```
+
+Run Python client
+
+```
+cd PythonClient
+python manual_control.py
+```
+
+
+
 ## Project: Self-Driving Vehicle Control
 
 
