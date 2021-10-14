@@ -54,6 +54,12 @@ python module_7.py
 ```
 ![carla-track](https://deepanshut041.github.io/self-driving-car-specialization/01_introduction_to_self_driving_cars/media/cover.gif)
 
+Completing the track produces the folder controller_ouput
+
+| Steering | Throttle | speed |
+| -------- | -------- | ----- |
+|![](Course1FinalProject/controller_output/steer_output.png) | ![](Course1FinalProject/controller_output/throttle_output.png) | ![](Course1FinalProject/controller_output/forward_speed.png)
+
 ## Add Camera
 
 Add [Camera sensor](https://carla.readthedocs.io/en/stable/cameras_and_sensors/) in the function `make_carla_settings`:
