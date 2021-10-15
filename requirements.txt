@@ -1,0 +1,9 @@
+numpy
+matplotlib
+scikit-learn
+pandas
+opencv-python
+tensorflow
+# boto3
+ipykernel
+ipywidgets

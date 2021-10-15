@@ -147,6 +147,13 @@ python module_7.py --images-to-disk
 
 Plus the forward speed
 
+## Behavioral Cloning
+
+Inspired from:
+https://github.com/slevin48/behavioural-cloning
+
+![steering_actual_vs_predicted](img/steering_actual_vs_predicted.png)
+
 ## More Features to add
 
 ### Sensor
