@@ -101,7 +101,51 @@ Run Python client with the `--images-to-disk` argument:
 ```
 python module_7.py --images-to-disk
 ```
-## Features to add
+
+## Log measurements
+
+[Mearsurement](https://carla.readthedocs.io/en/stable/measurements/) values we are interested in:
+
+<table class="docutils">
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>steer</td>
+<td>float</td>
+<td>Steering angle between [-1.0, 1.0] (*)</td>
+</tr>
+<tr>
+<td>throttle</td>
+<td>float</td>
+<td>Throttle input between [ 0.0, 1.0]</td>
+</tr>
+<!-- <tr>
+<td>brake</td>
+<td>float</td>
+<td>Brake input between [ 0.0, 1.0]</td>
+</tr>
+<tr>
+<td>hand_brake</td>
+<td>bool</td>
+<td>Whether the hand-brake is engaged</td>
+</tr>
+<tr>
+<td>reverse</td>
+<td>bool</td>
+<td>Whether the vehicle is in reverse gear</td>
+</tr> -->
+</tbody>
+</table>
+
+Plus the forward speed
+
+## More Features to add
 
 ### Sensor
   
