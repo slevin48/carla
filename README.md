@@ -3,6 +3,9 @@
 Autonomous Driving Simulator 🚗
 
 
+![carla_track](img/cover.gif)
+
+
 ## Setup Carla
 
 - Read [CARLA Setup Guide (Windows x64).pdf](https://d3c33hcgiwev3.cloudfront.net/IFfxQie8Eem9HA6xGGaRfg_20f6060027bc11e98ed3dfcfdba7c72b_CARLA-Setup-Guide-_Windows-x64_.pdf?Expires=1634342400&Signature=O7-bO5nGH1Ud2k2SMjX~YzuVO0dHQdeIjswRtRqLAHx9G~uYOSPzQVF4E6q6G7oBk232kNPKKuVT76SfURnvc-1Bd-dQdMfMF158LZdWHWFlo9L8PJ~nDSLNWF~hLtUD2WN-PnUFJcO4kKnYb4FKX4sxyme1y8VrRN1BkRGQkKs_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A)
