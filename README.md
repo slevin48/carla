@@ -2,8 +2,6 @@
 
 Autonomous Driving Simulator 🚗
 
-![carla](https://deepanshut041.github.io/self-driving-car-specialization/01_introduction_to_self_driving_cars/media/cover.gif)
-
 
 ## Setup Carla
 
@@ -52,8 +50,9 @@ Move the Course1FinalProject inside of CarlaSimulator/PythonClient
 ```
 python module_7.py
 ```
+<!--
 ![carla-track](img/carla-track.mp4)
-
+-->
 Completing the track produces the folder controller_ouput
 
 | Steering | Throttle | speed |
